@@ -5,15 +5,31 @@
 /// </summary>
 public class Song
 {
-    // Auto -implemented properties
-    public string Genre { get; set; }
+    /// <summary>
+    /// The one genre the song belongs to
+    /// </summary>
+    public string? Genre { get; set; }
 
-    public List<string> Artists { get; set; }
+    /// <summary>
+    /// The artists performing the song. Each element is one
+    /// artist
+    /// </summary>
+    public List<string> Artists { get; set; } = [];
 
-    public string SongTitle { get; set; }
+    /// <summary>
+    /// Title of the song. English titles only
+    /// </summary>
+    public required string SongTitle { get; set; }
 
-    public string Album { get; set; }
+    /// <summary>
+    /// The album the song belongs to
+    /// </summary>
+    public required string Album { get; set; }
 
+    /// <summary>
+    /// Number of times song has been streamed. A stream counts as
+    /// a single play of at least 30 seconds of the song.
+    /// </summary>
     public ulong NumberOfStreams { get; set; }
 
     /// <summary>
@@ -21,5 +37,5 @@ public class Song
     /// machine. ex: C:\Music\Band_Name\SongFile.mp3
     /// All songs end with .mp3
     /// </summary>
-    public string SongFileLocation { get; set; }
+    public required string SongFileLocation { get; set; }
 }

@@ -1,23 +1,23 @@
 ﻿namespace FirstCRUDApp;
 
-public class SongDB
+public static class SongDB
 {
-    public List<Song> GetAllSongs()
+    public static List<Song> GetAllSongs()
     {
         throw new NotImplementedException();
     }
 
-    public void AddSong(Song song)
+    public static void AddSong(Song song)
     {
         throw new NotImplementedException();
     }
 
-    public void UpdateSong(Song song)
+    public static void UpdateSong(Song song)
     {
         throw new NotImplementedException();
     }
 
-    public void DeleteSong(int songId)
+    public static void DeleteSong(int songId)
     {
         throw new NotImplementedException();
     }

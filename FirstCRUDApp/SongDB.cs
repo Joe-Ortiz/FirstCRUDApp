@@ -7,8 +7,13 @@ public static class SongDB
     public static List<Song> GetAllSongs()
     {
         // Get connection to database
-        SqlConnection con = new SqlConnection();
+        SqlConnection con = new();
+        con.ConnectionString = "Data Source=localhost;Initial Catalog=SongDb;Integrated Security=True;Trust Server Certificate=True;";
 
+        // Open the connection to the database
+        con.Open();
+
+        return new List<Song>();
         // Prepare our SQL
 
         // Execute SQL
